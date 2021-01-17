@@ -1,17 +1,19 @@
-FIRSTLY LET'S LEARN SOME IMPORTANT TERMS:
+                                     SOME IMPORTANT TERMS:
 
 -DATA: 
-  Data is a unorganised raw facts that need processing whithout which it seemingly 
-  and useless to humans.Data is an individual unit that contains raw material which
-  does not carry any specific meaning.
+  Data is a unorganised raw facts that need processing whithout which it seemingly and useless to humans.
+  Data is an individual unit that contains raw material whichdoes not carry any specific meaning.
 
 -INFORMATION:
   Information is a procaeesd, organised data presented in a given context and is useful
   to humans.
 
 -ALGORITHMS:
+  An algorithm is a step by step procedure, which defines a set of instruction to be executed in a certain order to get desired output.
 
--ARTIFICIAL INTELIGENCE
+-ARTIFICIAL INTELIGENCE:
+  AI refers to the simulation of human intellignce in machine that are programmed to think like human and mimic their action.
+  The term may also be applied to any machine that exhibits traits associated with a human mind such as learning and problem solving.
 
 -MACHINE LEARNING
   Machine learning(ML) is a type of artificial intelligence(AI) that all application to become more accurate at predicting outcomes without being explicitly prograed to do so.
