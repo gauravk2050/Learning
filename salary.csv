@@ -1,9 +1,17 @@
-experience,test_score,interview_score,salary
-,8,9,50000
-,8,6,45000
-five,6,7,60000
-two,10,10,65000
-seven,9,6,70000
-three,7,10,62000
-ten,,7,72000
-eleven,7,8,80000
+company,job,degree,salary_more_then_100k
+google,sales executive,bachelors,0
+google,sales executive,masters,0
+google,business manager,bachelors,1
+google,business manager,masters,1
+google,computer programmer,bachelors,0
+google,computer programmer,masters,1
+abc pharma,sales executive,masters,0
+abc pharma,computer programmer,bachelors,0
+abc pharma,business manager,bachelors,0
+abc pharma,business manager,masters,1
+facebook,sales executive,bachelors,1
+facebook,sales executive,masters,1
+facebook,business manager,bachelors,1
+facebook,business manager,masters,1
+facebook,computer programmer,bachelors,1
+facebook,computer programmer,masters,1
