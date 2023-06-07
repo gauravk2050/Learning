@@ -1,0 +1,30 @@
+import java.util.*;
+public class JavaTransformation {
+  public void extractNames(String payeeNm, String[] output) {
+    if (payeeNm != null && !payeeNm.isEmpty()) {
+      String[] names = payeeNm.split(" & ");
+      int numNames = Math.min(names.length, output.length);
+      
+      for (int i = 0; i < numNames; i++) {
+        output[i] = names[i];
+      }
+    }
+  }
+  public static void main(String[] args) {
+    JavaTransformation javaTransformation = new JavaTransformation();
+    
+    // Example input value
+    String payeeNm = "MAYANK KUMAR GUPTA & KRISHNA & DEV KUMAR";
+    
+    // Example output variables
+    String[] output = new String[6];
+    
+    // Call the extractNames function
+    javaTransformation.extractNames(payeeNm, output);
+    
+    // Print the extracted names
+    for (String name : output) {
+      System.out.println(name);
+    }
+  }
+}
