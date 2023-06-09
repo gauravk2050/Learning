@@ -110,15 +110,42 @@ public class JavaTransformation {
 }
 
 
-    
-    // Call the extractNames function
-    javaTransformation.extractNames(payeeNm, output);
-    
-    
-    
-    // Print the extracted names
-    for (String name : output){
-      System.out.println(name);
+-------------------------------------------------------------------------*********************************-------------------------------------------------------------
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class JavaTransformation {
+    public static void main(String[] args) {
+        // Example input value
+        String payeeNm = "MAYANK KUMAR GUPTA & KRISHNA & DEV KUMAR";
+
+        ArrayList<String> names = new ArrayList<>(Arrays.asList(payeeNm.split(" & ")));
+
+        for (String name : names) {
+            System.out.println("");
+            System.out.println("==============*****==============");
+            System.out.println(name);
+
+            ArrayList<String> nameParts = new ArrayList<>(Arrays.asList(name.trim().split("\\s+")));
+
+            String firstName = "";
+            String middleName = "";
+            String lastName = "";
+
+            if (!nameParts.isEmpty()) {
+                firstName = nameParts.get(0);
+            }
+            if (nameParts.size() >= 2) {
+                lastName = nameParts.get(nameParts.size() - 1);
+                middleName = String.join(" ", nameParts.subList(1, nameParts.size() - 1));
+            }
+
+            System.out.println("-----");
+            System.out.println("First Name: " + firstName);
+            System.out.println("Middle Name: " + middleName);
+            System.out.println("Last Name: " + lastName);
+        }
+    }
 }
- }
 
