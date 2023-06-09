@@ -48,24 +48,24 @@ public class JavaTransformation {
     JavaTransformation javaTransformation = new JavaTransformation();
     
     // Example input value
-    String payeeNm = "MAYANK KUMAR GUPTA";
+    String payeeNm = "MAYANK KUMAR GUPTA & KRISHNA & DEV KUMAR";
     
     String firstName = "";
     String middleName = "";
     String lastName = "";
-    String[] nameParts = payeeNm.trim().split("\\s+");
+    // String[] nameParts = payeeNm.trim().split("\\s+");
     
-    if (nameParts.length >= 1) {
-            firstName = nameParts[0];
-    }
-    if (nameParts.length >= 2) {
-        lastName = nameParts[nameParts.length - 1];
-        middleName = String.join(" ", Arrays.copyOfRange(nameParts, 1, nameParts.length - 1));
-    }
+    // if (nameParts.length >= 1) {
+    //         firstName = nameParts[0];
+    // }
+    // if (nameParts.length >= 2) {
+    //     lastName = nameParts[nameParts.length - 1];
+    //     middleName = String.join(" ", Arrays.copyOfRange(nameParts, 1, nameParts.length - 1));
+    // }
     
-    System.out.println("First Name: " + firstName);
-    System.out.println("Middle Name: " + middleName);
-    System.out.println("Last Name: " + lastName);
+    // System.out.println("First Name: " + firstName);
+    // System.out.println("Middle Name: " + middleName);
+    // System.out.println("Last Name: " + lastName);
     
     
     
@@ -73,6 +73,43 @@ public class JavaTransformation {
     
     // Example output variables
     String[] output = new String[6];
+    
+    // Call the extractNames function
+    javaTransformation.extractNames(payeeNm, output);
+    
+    
+    // Print the extracted names
+    for (String name : output){
+        if(name==null){
+            break;
+        }
+        System.out.println("");
+        System.out.println("==============*****==============");
+        System.out.println(name);
+        
+        String[] nameParts = name.trim().split("\\s+");
+    
+        if (nameParts.length >= 1) {
+            firstName = nameParts[0];
+        }
+        if (nameParts.length >= 2) {
+            lastName = nameParts[nameParts.length - 1];
+            middleName = String.join(" ", Arrays.copyOfRange(nameParts, 1, nameParts.length - 1));
+        }
+    
+        System.out.println("-----");
+        System.out.println("First Name: " + firstName);
+        System.out.println("Middle Name: " + middleName);
+        System.out.println("Last Name: " + lastName);
+
+        
+    }
+    
+    
+  }   
+}
+
+
     
     // Call the extractNames function
     javaTransformation.extractNames(payeeNm, output);
